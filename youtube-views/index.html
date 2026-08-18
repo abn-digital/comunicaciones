@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Comunicado ABN Group × YouTube — cambio en el conteo de visualizaciones desde el 24/8/2026.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='88'%3E▶️%3C/text%3E%3C/svg%3E">
+<title>Cambio en las views de YouTube</title>
+<style>
+  :root{
+    --bg:#f3f0e9; --bg2:#ece6db; --card:#fffdf9; --ink:#211d1a; --body:#564f47;
+    --muted:#8d8478; --line:rgba(33,29,26,.12); --line2:rgba(33,29,26,.07);
+    --yt:#ff0000; --yt-ink:#e00000; --yt-soft:#fdeceb; --yt-badge:#ff0000;
+    --frame:#1a1613; --frame-ink:#f4f0e8;
+    --sans:'Helvetica Neue','Helvetica Neue LT Std',Helvetica,Arial,sans-serif;
+    --mono:ui-monospace,'SF Mono','JetBrains Mono',Menlo,Consolas,monospace;
+    --shadow:0 24px 60px -30px rgba(33,29,26,.35);
+  }
+  @media (prefers-color-scheme:dark){:root{
+    --bg:#161310; --bg2:#1d1914; --card:#201c17; --ink:#f4f0e8; --body:#c4bdb0;
+    --muted:#a89f8f; --line:rgba(244,240,232,.14); --line2:rgba(244,240,232,.07);
+    --yt:#ff5146; --yt-ink:#ff6a60; --yt-soft:#2a1613; --yt-badge:#ff0000;
+    --frame:#0e0c0a; --frame-ink:#f4f0e8;
+    --shadow:0 30px 70px -34px rgba(0,0,0,.7);
+  }}
+  :root[data-theme="dark"]{--bg:#161310;--bg2:#1d1914;--card:#201c17;--ink:#f4f0e8;--body:#c4bdb0;--muted:#a89f8f;--line:rgba(244,240,232,.14);--line2:rgba(244,240,232,.07);--yt:#ff5146;--yt-ink:#ff6a60;--yt-soft:#2a1613;--yt-badge:#ff0000;--frame:#0e0c0a;--frame-ink:#f4f0e8;--shadow:0 30px 70px -34px rgba(0,0,0,.7);}
+  :root[data-theme="light"]{--bg:#f3f0e9;--bg2:#ece6db;--card:#fffdf9;--ink:#211d1a;--body:#564f47;--muted:#8d8478;--line:rgba(33,29,26,.12);--line2:rgba(33,29,26,.07);--yt:#ff0000;--yt-ink:#e00000;--yt-soft:#fdeceb;--yt-badge:#ff0000;--frame:#1a1613;--frame-ink:#f4f0e8;--shadow:0 24px 60px -30px rgba(33,29,26,.35);}
+
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--body);font-family:var(--sans);line-height:1.62;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  .wrap{max-width:940px;margin:0 auto;padding:0 24px}
+  section{padding:44px 0}
+  ::selection{background:var(--yt);color:#fff}
+
+  /* ---------- theme toggle ---------- */
+  .theme-toggle{position:fixed;top:16px;right:16px;z-index:60;width:42px;height:42px;border-radius:50%;
+    border:1px solid var(--line);background:color-mix(in srgb,var(--card) 82%,transparent);color:var(--ink);
+    cursor:pointer;display:flex;align-items:center;justify-content:center;
+    transition:border-color .2s,transform .2s;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+  .theme-toggle:hover{border-color:var(--yt);transform:scale(1.06)}
+  .theme-toggle svg{width:19px;height:19px;display:block}
+
+  /* ---------- co-brand bar ---------- */
+  .topbar{display:flex;align-items:center;justify-content:center;gap:20px;padding:30px 24px 8px}
+  .lock{display:flex;align-items:center;gap:14px}
+  .lock .name{font-size:15px;font-weight:600;letter-spacing:.005em;color:var(--ink);white-space:nowrap}
+  .iso{width:26px;height:26px;flex:none}
+  .iso path{fill:currentColor}
+  .abn{color:var(--ink)}
+  .cross{color:var(--muted);font-weight:300;font-size:16px}
+  .yt-badge{width:30px;height:21px;flex:none}
+  .yt .name{color:var(--ink)}
+
+  /* ---------- hero ---------- */
+  .hero{text-align:center;padding:34px 0 6px}
+  .eyebrow{font-size:11px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--yt-ink)}
+  h1{font-family:var(--sans);font-weight:200;font-size:clamp(34px,6.6vw,66px);line-height:1.04;letter-spacing:-.025em;color:var(--ink);margin:20px auto 0;max-width:14ch;text-wrap:balance}
+  h1 b{font-weight:500}
+  .lead{max-width:60ch;margin:22px auto 0;font-size:clamp(15px,1.7vw,18px);font-weight:300;color:var(--body)}
+  .datechip{display:inline-flex;align-items:center;gap:10px;margin-top:26px;padding:9px 18px;border:1px solid var(--line);border-radius:100px;background:var(--card);font-size:13px;font-weight:500;color:var(--ink);letter-spacing:.02em}
+  .datechip .d{width:7px;height:7px;border-radius:50%;background:var(--yt);box-shadow:0 0 0 0 var(--yt);animation:pulse 2.4s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--yt) 55%,transparent)}70%{box-shadow:0 0 0 9px transparent}100%{box-shadow:0 0 0 0 transparent}}
+
+  /* ---------- player motif ---------- */
+  .player{max-width:560px;margin:42px auto 0}
+  .frame{position:relative;aspect-ratio:16/9;border-radius:18px;overflow:hidden;background:
+      radial-gradient(120% 90% at 50% 42%, #26201c 0%, var(--frame) 68%);
+      box-shadow:var(--shadow);border:1px solid var(--line)}
+  .glow{position:absolute;inset:0;background:radial-gradient(38% 46% at 50% 46%, color-mix(in srgb,var(--yt) 42%,transparent), transparent 70%);filter:blur(6px)}
+  .play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);border:0;background:transparent;cursor:default;padding:0}
+  .play svg{width:88px;height:62px;display:block;filter:drop-shadow(0 10px 24px rgba(0,0,0,.45))}
+  .scrub{position:absolute;left:0;bottom:0;height:4px;width:100%;background:rgba(255,255,255,.16)}
+  .scrub::after{content:'';position:absolute;left:0;top:0;height:100%;width:100%;background:var(--yt-badge);transform:scaleX(0);transform-origin:left;animation:play 2.1s cubic-bezier(.4,0,.1,1) .25s forwards}
+  @keyframes play{to{transform:scaleX(1)}}
+  .metric{display:flex;align-items:baseline;justify-content:center;gap:12px;margin-top:22px}
+  .metric .dot{align-self:center;width:8px;height:8px;border-radius:50%;background:var(--yt);flex:none}
+  .metric .mlabel{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+  .metric .num{font-size:clamp(26px,4vw,36px);font-weight:300;color:var(--ink);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+  .cap{text-align:center;margin:10px auto 0;font-size:13.5px;color:var(--muted);max-width:44ch}
+
+  /* ---------- generic section ---------- */
+  .kicker{display:flex;align-items:center;gap:12px;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
+  .kicker .k-n{color:var(--yt-ink);font-variant-numeric:tabular-nums}
+  .kicker::after{content:'';flex:1;height:1px;background:var(--line)}
+  h2{font-weight:300;font-size:clamp(24px,3.4vw,34px);line-height:1.14;letter-spacing:-.015em;color:var(--ink);margin:0 0 4px;max-width:22ch;text-wrap:balance}
+  h2 b{font-weight:500}
+  .p{font-size:16px;font-weight:300;color:var(--body);max-width:64ch;margin:12px 0 0}
+  .p b{font-weight:500;color:var(--ink)}
+  em{font-style:italic;color:var(--ink)}
+
+  .divider{height:1px;background:var(--line);max-width:940px;margin:54px auto}
+
+  /* pull statement */
+  .pull{margin:40px 0 16px;padding-left:24px;border-left:2px solid var(--yt)}
+  .pull p{font-weight:200;font-size:clamp(21px,2.9vw,30px);line-height:1.28;letter-spacing:-.015em;color:var(--ink);margin:0;max-width:24ch}
+  .pull p b{font-weight:500}
+
+  /* cards */
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:32px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px 26px 24px;position:relative;overflow:hidden}
+  .card.accent{border-color:color-mix(in srgb,var(--yt) 42%,var(--line))}
+  .card.accent::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--yt)}
+  .tag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:4px 10px;border-radius:100px;margin-bottom:16px}
+  .tag.now{background:var(--yt-soft);color:var(--yt-ink)}
+  .tag.prev{background:var(--bg2);color:var(--muted)}
+  .card h3{font-size:19px;font-weight:500;color:var(--ink);margin:0 0 8px;letter-spacing:-.01em}
+  .card p{font-size:14.5px;font-weight:300;color:var(--body);margin:0}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+  .chip{font-family:var(--sans);font-size:12.5px;font-weight:500;letter-spacing:.01em;color:var(--ink);background:var(--bg2);border:1px solid var(--line);border-radius:100px;padding:6px 13px}
+  .chip .cl{color:var(--muted);font-weight:400}
+  .cnote{font-size:13px;color:var(--muted);margin-top:16px;text-align:center}
+
+  /* advisory list */
+  .adv{margin-top:32px;display:grid;gap:2px}
+  .adv .row{display:grid;grid-template-columns:auto 1fr;gap:18px;padding:20px 0;border-top:1px solid var(--line)}
+  .adv .row:last-child{border-bottom:1px solid var(--line)}
+  .adv .rn{font-variant-numeric:tabular-nums;font-size:14px;font-weight:600;color:var(--yt-ink);padding-top:2px}
+  .adv h4{margin:0 0 5px;font-size:16.5px;font-weight:500;color:var(--ink);letter-spacing:-.01em}
+  .adv p{margin:0;font-size:14.5px;font-weight:300;color:var(--body)}
+  .adv .mono{font-weight:500;color:var(--ink)}
+
+  /* timeline */
+  .tl{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:32px}
+  .tl .t{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 22px}
+  .tl .t.on{border-color:color-mix(in srgb,var(--yt) 42%,var(--line))}
+  .tl .when{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:9px}
+  .tl .t.on .when{color:var(--yt-ink)}
+  .tl .when .d{width:7px;height:7px;border-radius:50%;background:currentColor;flex:none}
+  .tl .what{margin:12px 0 0;font-size:16px;font-weight:300;color:var(--ink)}
+
+  /* footer */
+  .foot{margin-top:20px;background:var(--bg2);border-top:1px solid var(--line)}
+  .foot .in{max-width:940px;margin:0 auto;padding:44px 24px 54px}
+  .res{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px}
+  .res a{display:inline-flex;align-items:center;gap:9px;text-decoration:none;font-size:13.5px;font-weight:500;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:100px;padding:11px 18px;transition:border-color .2s}
+  .res a:hover{border-color:var(--yt)}
+  .res a .arw{color:var(--yt-ink);font-weight:600}
+  .foot-lock{display:flex;align-items:center;gap:14px;padding-top:26px;border-top:1px solid var(--line)}
+  .disc{margin-top:18px;font-size:12px;line-height:1.6;color:var(--muted);max-width:70ch}
+  .sign{font-size:13.5px;color:var(--body);margin:0 0 2px}
+  .sign b{color:var(--ink);font-weight:600}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.6,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+    .scrub::after{animation:none;transform:scaleX(1)}
+    .datechip .d{animation:none}
+  }
+  @media (max-width:640px){
+    .topbar{gap:14px;flex-wrap:wrap}
+    .tl{grid-template-columns:1fr}
+    .adv .row{grid-template-columns:1fr;gap:6px}
+    .adv .rn{padding-top:0}
+  }
+</style>
+</head>
+<body>
+
+
+<button class="theme-toggle" id="tt" aria-label="Cambiar tema" type="button"></button>
+
+<!-- ============ CO-BRAND BAR ============ -->
+<div class="topbar">
+  <span class="lock abn">
+    <svg class="iso" viewBox="0 0 1000 1000" aria-hidden="true"><path d="M245.09,361.93c.18,67.87,57.76,124.01,124.21,124.3l46.57-1.96c15.75.07,28.74,9.36,33.55,22.25,5.73,15.35,1.93,30.83-11.37,41.46l-248.64,198.67c-5.24,4.19-8.42,10.3-8.42,16.7l-.29,28.24c-.62,29.53,17.14,43.89,28.4,43.87l169.72-.9,430.17-310.28c4.93-3.94,7.94-10.61,7.94-16.54l2.41-83.02c0-11.27-8-20.16-19.53-20.16l-230.56.12c-32.3.02-56.35-23.52-56.33-55.81l.08-164.35c0-11.18-8.1-20-19.71-20l-228.82,2.41c-10.57,0-19.85,7.51-19.83,18.19l.46,176.8Z"/></svg>
+    <span class="name">ABN Group</span>
+  </span>
+  <span class="cross">×</span>
+  <span class="lock yt">
+    <svg class="yt-badge" viewBox="0 0 30 21" aria-hidden="true"><rect width="30" height="21" rx="5.4" fill="#ff0000"/><path d="M12 6.2 L21 10.5 L12 14.8 Z" fill="#fff"/></svg>
+    <span class="name">YouTube</span>
+  </span>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero wrap">
+  <div class="eyebrow reveal">Comunicado para partners</div>
+  <h1 class="reveal">YouTube cambia cómo cuenta las <b>visualizaciones</b>.</h1>
+  <p class="lead reveal">Desde el 24 de agosto de 2026, una visualización se cuenta apenas empieza la reproducción —en todos los formatos y sin tiempo mínimo—. Preparamos este resumen para que sepas qué cambia y cómo impacta en tus métricas.</p>
+  <div class="datechip reveal"><span class="d"></span>Entra en vigencia · 24 · 08 · 2026</div>
+
+  <div class="player reveal">
+    <div class="frame">
+      <span class="glow"></span>
+      <span class="play"><svg viewBox="0 0 30 21" aria-hidden="true"><rect width="30" height="21" rx="5.4" fill="#ff0000"/><path d="M12 6.2 L21 10.5 L12 14.8 Z" fill="#fff"/></svg></span>
+      <span class="scrub"></span>
+    </div>
+    <div class="metric"><span class="dot"></span><span class="mlabel">Visualizaciones</span><span class="num" id="vc">0</span></div>
+    <p class="cap">Ahora cada reproducción suma desde el segundo cero.</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============ EL CAMBIO ============ -->
+<section class="wrap reveal">
+  <div class="kicker"><span class="k-n">01</span> El cambio</div>
+  <h2>Una misma forma de contar, para <b>todos los formatos</b>.</h2>
+  <p class="p">El año pasado, YouTube ajustó el conteo de visualizaciones de Shorts para alinearlo al estándar del sector. Ahora extiende esa misma metodología a todos los formatos, incluidos los <b>videos largos</b> y las <b>transmisiones en vivo</b>.</p>
+  <div class="pull"><p>Una visualización se cuenta <b>desde que el video empieza a reproducirse</b> — sin necesidad de un tiempo mínimo.</p></div>
+</section>
+
+<!-- ============ DOS MÉTRICAS ============ -->
+<section class="wrap reveal">
+  <div class="kicker"><span class="k-n">02</span> Qué vas a ver</div>
+  <h2>Dos métricas que <b>conviven</b>.</h2>
+  <p class="p">A partir del 24 de agosto vas a poder mirar el dato nuevo y también el anterior, para no perder comparabilidad con tu histórico.</p>
+  <div class="cards">
+    <div class="card accent">
+      <span class="tag now">Nueva lógica</span>
+      <h3>Visualizaciones</h3>
+      <p>Suma desde el play, en todos los formatos. Es el número que pasa a mostrarse por defecto.</p>
+      <div class="chips"><span class="chip"><span class="cl">Data API ·</span> viewCount</span></div>
+    </div>
+    <div class="card">
+      <span class="tag prev">Lógica anterior</span>
+      <h3>Visualizaciones interesadas</h3>
+      <p>Mantiene el conteo previo (con tiempo mínimo de reproducción), para comparar contra tu serie histórica.</p>
+      <div class="chips"><span class="chip"><span class="cl">Analytics ·</span> engagedViews</span><span class="chip"><span class="cl">Reporting ·</span> engaged_views</span></div>
+    </div>
+  </div>
+  <p class="cnote">Ambas quedan disponibles — cada una responde a una pregunta distinta.</p>
+</section>
+
+<!-- ============ IMPACTO POR API ============ -->
+<section class="wrap reveal">
+  <div class="kicker"><span class="k-n">03</span> En las APIs</div>
+  <h2>Dónde impacta el <b>cambio técnico</b>.</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>API YouTube Data</h3>
+      <p>El 24 de agosto, el campo <span style="font-weight:500;color:var(--ink)">viewCount</span> pasa a reflejar la nueva lógica en todos los tipos de contenido. El conteo anterior deja de estar en la Data API pública y se consulta como <em>Visualizaciones interesadas</em> en Analytics y Reporting.</p>
+      <div class="chips"><span class="chip">viewCount</span></div>
+      <a href="https://developers.google.com/youtube/v3/docs/videos?hl=es-419#statistics.viewCount" target="_blank" rel="noopener" style="display:inline-block;margin-top:16px;font-size:13px;font-weight:500;color:var(--yt-ink);text-decoration:none">Ver documentación →</a>
+    </div>
+    <div class="card">
+      <h3>YouTube Analytics &amp; Reporting</h3>
+      <p>Con canal propio o acceso autorizado, vas a poder consultar tanto las <em>visualizaciones</em> actualizadas como las <em>visualizaciones interesadas</em>, en consultas segmentadas e informes en bloque.</p>
+      <div class="chips"><span class="chip"><span class="cl">segmentadas ·</span> engagedViews</span><span class="chip"><span class="cl">en bloque ·</span> engaged_views</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PARA TU MARCA ============ -->
+<section class="wrap reveal">
+  <div class="kicker"><span class="k-n">04</span> Qué significa para tu marca</div>
+  <h2>Lo importante, <b>en tres puntos</b>.</h2>
+  <div class="adv">
+    <div class="row">
+      <div class="rn">01</div>
+      <div>
+        <h4>Tus números de views pueden subir.</h4>
+        <p>Es esperable: ahora se cuentan desde el primer instante de reproducción. El salto se va a notar sobre todo a partir del 24/8.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="rn">02</div>
+      <div>
+        <h4>No es más audiencia — es otra forma de medir.</h4>
+        <p>El cambio alinea a YouTube con el estándar del sector. Para comparar contra tu histórico, la referencia sigue siendo <span class="mono">Visualizaciones interesadas</span> (engagedViews).</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="rn">03</div>
+      <div>
+        <h4>Revisá tus reportes y dashboards.</h4>
+        <p>Si tus tableros leen <span class="mono">viewCount</span> desde la API, contemplá el salto del 24/8; si necesitás continuidad con la serie anterior, la vía es migrar a <span class="mono">engagedViews</span>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TIMELINE ============ -->
+<section class="wrap reveal">
+  <div class="kicker"><span class="k-n">05</span> Línea de tiempo</div>
+  <div class="tl">
+    <div class="t">
+      <div class="when"><span class="d"></span>El año pasado</div>
+      <p class="what">YouTube adopta la nueva metodología de conteo en <b style="font-weight:500;color:var(--ink)">Shorts</b>.</p>
+    </div>
+    <div class="t on">
+      <div class="when"><span class="d"></span>24 ago 2026</div>
+      <p class="what">Se extiende a <b style="font-weight:500;color:var(--ink)">todos los formatos</b> y <span style="font-weight:500;color:var(--ink)">viewCount</span> se actualiza.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="foot reveal">
+  <div class="in">
+    <div class="res">
+      <a href="https://support.google.com/youtube/thread/433409976" target="_blank" rel="noopener">Comunicado y más información <span class="arw">→</span></a>
+      <a href="https://developers.google.com/youtube/v3?hl=es-419" target="_blank" rel="noopener">Guía para desarrolladores de APIs <span class="arw">→</span></a>
+      <a href="https://issuetracker.google.com/issues?q=componentid:186600" target="_blank" rel="noopener">Seguimiento de incidencias <span class="arw">→</span></a>
+    </div>
+
+    <div class="foot-lock">
+      <span class="lock abn">
+        <svg class="iso" viewBox="0 0 1000 1000" aria-hidden="true"><path d="M245.09,361.93c.18,67.87,57.76,124.01,124.21,124.3l46.57-1.96c15.75.07,28.74,9.36,33.55,22.25,5.73,15.35,1.93,30.83-11.37,41.46l-248.64,198.67c-5.24,4.19-8.42,10.3-8.42,16.7l-.29,28.24c-.62,29.53,17.14,43.89,28.4,43.87l169.72-.9,430.17-310.28c4.93-3.94,7.94-10.61,7.94-16.54l2.41-83.02c0-11.27-8-20.16-19.53-20.16l-230.56.12c-32.3.02-56.35-23.52-56.33-55.81l.08-164.35c0-11.18-8.1-20-19.71-20l-228.82,2.41c-10.57,0-19.85,7.51-19.83,18.19l.46,176.8Z"/></svg>
+        <span class="name">ABN Group</span>
+      </span>
+    </div>
+    <p class="sign" style="margin-top:16px"><b>Un resumen preparado por ABN Group</b> a partir de la comunicación oficial de YouTube.</p>
+    <p class="disc">¿Dudas sobre cómo impacta en tus reportes? Escribinos y lo revisamos juntos. · YouTube y sus APIs son marcas de Google LLC; este material es informativo y no reemplaza la documentación oficial.</p>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // theme toggle — por defecto sigue al system; el botón lo puede forzar
+    var root = document.documentElement, tt = document.getElementById('tt');
+    var SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.2v2.3M12 19.5v2.3M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.2 12h2.3M19.5 12h2.3M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6" stroke-linecap="round"/></svg>';
+    var MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 12.9A8.6 8.6 0 1 1 11.1 3.2a6.7 6.7 0 0 0 9.9 9.7Z" stroke-linejoin="round"/></svg>';
+    function sysDark(){ return window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches; }
+    function isDark(){ var t = root.getAttribute('data-theme'); return t ? t === 'dark' : sysDark(); }
+    function paintTT(){ if(tt){ tt.innerHTML = isDark() ? SUN : MOON; tt.setAttribute('aria-label', isDark() ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'); } }
+    if (tt){ tt.addEventListener('click', function(){ root.setAttribute('data-theme', isDark() ? 'light' : 'dark'); paintTT(); }); }
+    if (window.matchMedia){ try{ matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(){ if(!root.getAttribute('data-theme')) paintTT(); }); }catch(e){} }
+    paintTT();
+
+    // view counter
+    var el = document.getElementById('vc');
+    if (el){
+      var target = 1284502;
+      if (reduce){ el.textContent = target.toLocaleString('es-AR'); }
+      else{
+        var dur = 2000, t0 = null;
+        function tick(t){ if(!t0)t0=t; var p=Math.min(1,(t-t0)/dur); var e=1-Math.pow(1-p,3);
+          el.textContent = Math.floor(e*target).toLocaleString('es-AR'); if(p<1) requestAnimationFrame(tick); }
+        requestAnimationFrame(tick);
+      }
+    }
+    // reveals
+    var items = document.querySelectorAll('.reveal');
+    if (reduce || !('IntersectionObserver' in window)){ items.forEach(function(x){x.classList.add('in');}); return; }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, {threshold:.14, rootMargin:'0px 0px -8% 0px'});
+    items.forEach(function(x){ io.observe(x); });
+  })();
+</script>
+
+</body>
+</html>
