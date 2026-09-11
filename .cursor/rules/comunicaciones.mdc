@@ -1,0 +1,21 @@
+---
+description: Comunicaciones ABN — noticia in, link lindo out. Seguir AGENTS.md y la skill nueva-comunicacion.
+alwaysApply: true
+---
+
+# Comunicaciones
+
+Este repo publica comunicados estáticos en GitHub Pages.
+
+Cuando el usuario mande una noticia, link oficial, forward de Slack o pida un comunicado para clientes:
+
+1. Leé `AGENTS.md` y `.agents/skills/nueva-comunicacion/SKILL.md`.
+2. Investigá la fuente, armá `<slug>/index.html` al look boutique ABN (como `youtube-views/` o `chatgpt-ads/`).
+3. Actualizá el índice raíz y el README.
+4. **Entregá ambos links:**
+   - ES `https://abn-digital.github.io/comunicaciones/<slug>/`
+   - EN `https://abn-digital.github.io/comunicaciones/<slug>/en/`
+
+No respondas solo con un resumen en el chat: la entrega es la pieza + los URLs.
+
+Tema visual: default = preferencia del sistema (`prefers-color-scheme`), no dark forzado. Acento de color = del partner, no rojo ABN. Siempre ES + EN con pill boutique de idioma.

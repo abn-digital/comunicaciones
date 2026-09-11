@@ -1,31 +1,47 @@
 # COMUNICACIONES ABN Group
 
-Comunicados y landings de ABN Group, publicados automáticamente con **GitHub Pages**.
+Comunicados listos para compartir con clientes. Publicación automática con **GitHub Pages**.
 
 🔗 **En vivo:** https://abn-digital.github.io/comunicaciones/
 
-## Cómo funciona (igual que `propuestas`: drop & publish)
+Instrucciones para agentes (look, flujo, publish): **[AGENTS.md](./AGENTS.md)**.
 
-Este repo sirve **estáticamente desde la rama `main`**. Cualquier HTML que pushees queda publicado solo, sin build ni pasos extra.
+---
 
-### Para sumar una comunicación nueva
-1. Creá una carpeta con un `index.html` adentro:
+## Cómo funciona
+
+El repo sirve **estáticamente desde `main`**. Sin build: cualquier HTML que entre en `main` queda publicado.
+
+### Sumar una comunicación
+
+1. Carpeta bilingüe (ES default + EN):
    ```
    mi-comunicacion/
-     └── index.html
+     ├── index.html      # español
+     ├── en/index.html   # english
+     ├── og.png
+     └── og-en.png
    ```
-2. Commiteá y pusheá a `main`.
-3. En ~1 minuto queda viva en:
-   `https://abn-digital.github.io/comunicaciones/mi-comunicacion/`
+2. Card nueva en el `index.html` de la raíz.
+3. Commit + push a `main`.
+4. En ~1 minuto:
+   - ES `…/mi-comunicacion/`
+   - EN `…/mi-comunicacion/en/`
 
-> Tip: usá una carpeta con `index.html` (en vez de `mi-comunicacion.html`) para tener URLs limpias, sin el `.html`.
+> Usá carpeta + `index.html` (no `mi-comunicacion.html`) para URLs limpias.
 
-4. Opcional: sumá la nueva pieza al listado en el `index.html` de la raíz.
+### Notas
 
-## Notas
-- El HTML tiene que ser **autocontenido** (estilos y scripts inline; sin dependencias externas obligatorias). Las imágenes van dentro de la misma carpeta y se referencian con rutas relativas.
-- El archivo `.nojekyll` evita que GitHub Pages ignore carpetas que empiezan con `_`.
-- Look & feel: base boutique de ABN (marfil, Helvetica fina, tarjetas redondeadas). Marca ABN sin rojo; el rojo que aparece en la pieza de YouTube es de YouTube.
+- HTML **autocontenido** (CSS/JS inline; imágenes con rutas relativas).
+- `.nojekyll` evita que Pages ignore carpetas `_…`.
+- Look: boutique ABN (marfil, Helvetica fina). Acento de color = del partner (YouTube, OpenAI, etc.), no rojo ABN.
+- Tema: por defecto sigue al **sistema** del dispositivo; el toggle puede forzar claro/oscuro.
+
+---
 
 ## Contenido actual
-- `youtube-views/` — Comunicado ABN Group × YouTube: cambio en el conteo de visualizaciones (24/8/2026).
+
+| Pieza | Tema |
+|---|---|
+| [`chatgpt-ads/`](./chatgpt-ads/) | OpenAI · Anuncios en ChatGPT (ES · MX · BR, ago 2026) |
+| [`youtube-views/`](./youtube-views/) | YouTube · Cambio en el conteo de visualizaciones (24/8/2026) |
