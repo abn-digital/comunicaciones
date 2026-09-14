@@ -57,16 +57,7 @@
   .lock .name{font-size:15px;font-weight:600;color:var(--ink)}
   .iso{width:26px;height:26px;flex:none;color:var(--ink)}.iso path{fill:currentColor}
   .cross{color:var(--muted);font-weight:300;font-size:16px}
-  .ra-mark{width:32px;height:32px;flex:none;border-radius:0;object-fit:contain;background:transparent}
-  .ra-mark.is-dark{display:none}
-  @media (prefers-color-scheme:dark){
-    :root:not([data-theme="light"]) .ra-mark.is-light{display:none}
-    :root:not([data-theme="light"]) .ra-mark.is-dark{display:block}
-  }
-  :root[data-theme="dark"] .ra-mark.is-light{display:none}
-  :root[data-theme="dark"] .ra-mark.is-dark{display:block}
-  :root[data-theme="light"] .ra-mark.is-dark{display:none}
-  :root[data-theme="light"] .ra-mark.is-light{display:block}
+  .ra-mark{width:28px;height:28px;flex:none;border-radius:7px;object-fit:contain}
   .hero{text-align:center;padding-top:40px;padding-bottom:12px}
   .eyebrow{font-size:11px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--oa-ink)}
   h1{font-weight:200;font-size:clamp(34px,6.6vw,66px);line-height:1.04;letter-spacing:-.025em;color:var(--ink);margin:20px auto 0;max-width:16ch;text-wrap:balance}
@@ -144,8 +135,7 @@
   </span>
   <span class="cross">×</span>
   <span class="lock">
-    <img class="ra-mark is-light" src="../logo-light.png" width="32" height="32" alt="">
-    <img class="ra-mark is-dark" src="../logo-dark.png" width="32" height="32" alt="">
+    <img class="ra-mark" src="../logo.png" width="28" height="28" alt="">
     <span class="name">Re·Adapt</span>
   </span>
 </div>
