@@ -43,6 +43,7 @@ El repo sirve **estáticamente desde `main`**. Sin build: cualquier HTML que ent
 
 | Pieza | Tema |
 |---|---|
+| [`semana-2026-09-07-2/`](./semana-2026-09-07-2/) | Briefing semanal · Semana del 7 de septiembre de 2026 |
 | [`semana-2026-09-07/`](./semana-2026-09-07/) | Briefing semanal · 7 sep 2026 (AI Max, ChatGPT Ads, Forrester) |
 | [`readapt-clientes/`](./readapt-clientes/) | ABN Digital · Re·Adapt — Base bonificado + Pro 15 sep–15 dic 2026 |
 | [`chatgpt-ads/`](./chatgpt-ads/) | OpenAI · Anuncios en ChatGPT (ES · MX · BR, ago 2026) |
