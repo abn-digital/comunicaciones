@@ -43,5 +43,6 @@ El repo sirve **estáticamente desde `main`**. Sin build: cualquier HTML que ent
 
 | Pieza | Tema |
 |---|---|
+| [`readapt-clientes/`](./readapt-clientes/) | ABN Digital · Re·Adapt — Base bonificado + Pro 15 sep–15 dic 2026 |
 | [`chatgpt-ads/`](./chatgpt-ads/) | OpenAI · Anuncios en ChatGPT (ES · MX · BR, ago 2026) |
 | [`youtube-views/`](./youtube-views/) | YouTube · Cambio en el conteo de visualizaciones (24/8/2026) |
