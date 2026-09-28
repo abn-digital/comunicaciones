@@ -43,6 +43,7 @@ El repo sirve **estáticamente desde `main`**. Sin build: cualquier HTML que ent
 
 | Pieza | Tema |
 |---|---|
+| [`semana-2026-09-28/`](./semana-2026-09-28/) | Briefing semanal · Semana del 28 de septiembre 2026 |
 | [`semana-2026-09-21/`](./semana-2026-09-21/) | Briefing semanal · Semana del 21 de septiembre de 2026 |
 | [`semana-2026-09-07/`](./semana-2026-09-07/) | Briefing semanal · Semana del 7 de septiembre 2026 |
 | [`readapt-clientes/`](./readapt-clientes/) | ABN Digital · Re·Adapt — Base bonificado + Pro 15 sep–15 dic 2026 |
