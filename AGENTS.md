@@ -135,8 +135,6 @@ Favicon: data-URI del isotype ABN (como en las piezas actuales).
 
 HTML **autocontenido**: CSS y JS inline. Sin dependencias externas obligatorias (no CDNs que rompan offline). Imágenes locales con rutas relativas.
 
-**Analítica:** toda página carga `<script src="/comunicaciones/ph.js" defer></script>` antes de `</head>` (las piezas actuales ya lo traen; al duplicar una, queda). Manda pageviews, clics, web vitals y errores a PostHog, proyecto Hike (651073), con `app: comunicaciones`. Sin replay y sin identify. Chequeo: `node --test tests/ph.test.mjs`.
-
 No renombres ni borres slugs ya compartidos con clientes sin que lo pida el dueño del repo.
 
 ---
