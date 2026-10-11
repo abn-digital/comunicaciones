@@ -79,6 +79,5 @@ Si aún no hay push a `main`, decí ambas URLs y que hace falta commit + push (o
 - [ ] Look ABN boutique + acento del partner (ABN sin rojo)
 - [ ] Default de tema = system, no dark forzado
 - [ ] Listada en `index.html` raíz + README
-- [ ] `<script src="/comunicaciones/ph.js" defer></script>` antes de `</head>` en ES y EN
 - [ ] `og.png` + `og-en.png` 2400×1260 + meta OG/Twitter + hreflang
 - [ ] Links públicos ES y EN en la respuesta final
