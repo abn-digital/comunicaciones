@@ -122,6 +122,29 @@
   .who-copy .who-press a{color:inherit;border-bottom:1px solid transparent}
   .who-copy .who-press a:hover{border-bottom-color:var(--spot);color:#178a3f}
 
+  /* tv: guest clip on a warm band, caption to the side */
+  .tv{background:#ece6db}
+  .tv-row{
+    display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);
+    align-items:center;gap:clamp(22px,4vw,64px);
+    padding:10vh clamp(18px,3.2vw,56px);
+  }
+  .tv video{width:100%;height:auto;background:#000;border-radius:4px}
+  .tv-copy h3{
+    font-weight:200;font-size:clamp(28px,3.4vw,46px);line-height:1.08;
+    letter-spacing:-.03em;color:var(--ink);margin:0 0 18px;
+  }
+  .tv-copy p{font-size:clamp(16px,1.5vw,19px);font-weight:300;margin:0 0 14px;max-width:34ch}
+  .tv-copy .tv-src{font-size:12px;color:var(--muted);margin-top:22px}
+  .tv-copy .tv-src a{text-decoration:none;border-bottom:1px solid var(--line)}
+  .tv-copy .tv-src a:hover{border-bottom-color:var(--spot);color:#178a3f}
+  .qa{background:var(--bg)}
+  .qa .tv-row{grid-template-columns:minmax(0,1fr) minmax(0,1.5fr)}
+  .qa blockquote{
+    margin:0 0 22px;font-weight:200;font-size:clamp(24px,2.6vw,36px);line-height:1.18;
+    letter-spacing:-.02em;color:var(--ink);max-width:22ch;
+  }
+
   /* lex: face, then numbers to both edges */
   .lex{background:var(--dark);color:var(--ash)}
   .lex-face{
@@ -397,7 +420,7 @@
   }
 
   @media (max-width:860px){
-    .who,.lex-face,.demand-row,.gap-row,.done-grid,.people,.ask-grid{grid-template-columns:1fr}
+    .who,.tv-row,.qa .tv-row,.lex-face,.demand-row,.gap-row,.done-grid,.people,.ask-grid{grid-template-columns:1fr}
     .lex-chart{grid-template-columns:1fr;gap:28px}
     .plot{height:220px}
     .plot .col{width:18px}
@@ -457,13 +480,34 @@
         <a href="https://www.austral.edu.ar/el-messi-del-excel-es-graduado-austral/">Universidad Austral</a>
       </p>
       <p><span>Radio, TV y podcasts</span>
-        <a href="https://lnmas.lanacion.com.ar/video/+-verdad-11-de-diciembre-2024-jwidftWOlvoE/">LN+ (desde 1:47:30)</a> ·
+        <a href="#en-camara">LN+</a> ·
+        <a href="https://www.youtube.com/watch?v=eauiz7T0Pwk">El Doce</a> ·
         <a href="https://radioconvos.com.ar/juan-pablo-brea-explico-por-que-todo-el-mundo-deberia-aprender-a-usar-excel/">Radio con Vos</a> ·
         <a href="https://www.youtube.com/watch?v=HKwGxcJvlVc">Radio Sí</a> ·
         <a href="https://open.spotify.com/episode/4Z8DzdNIm2nQh9PfHBhGmo">Austral, en Spotify</a> ·
         <a href="https://www.youtube.com/watch?v=bHE2EYd_Jk8">EXCELeINFO</a> ·
         <a href="https://www.ivoox.com/en/juan-pablo-brea-messi-del-excel-audios-mp3_rf_109396024_1.html">Después de Todo</a>
       </p>
+    </div>
+  </div>
+</section>
+
+<section class="tv" id="en-camara" aria-label="Entrevista en LN+">
+  <div class="tv-row">
+    <video
+      controls
+      playsinline
+      preload="none"
+      poster="lnmas/poster.jpg"
+      src="lnmas/brea.mp4"
+      width="960"
+      height="540">
+    </video>
+    <div class="tv-copy">
+      <p class="k">En cámara</p>
+      <h3>LN+, con Esteban Trebucq.</h3>
+      <p>Diciembre de 2024. Habíamos aterrizado de Las Vegas unas horas antes. Seis minutos.</p>
+      <p class="tv-src">Video: LN+, +Verdad, 11/12/2024. <a href="https://lnmas.lanacion.com.ar/video/+-verdad-11-de-diciembre-2024-jwidftWOlvoE/">Programa completo</a></p>
     </div>
   </div>
 </section>
@@ -574,6 +618,26 @@
   <div class="pair">
     <img src="valverde/DSC03108.jpg" alt="En las oficinas de Google, antes de grabar" width="1600" height="1067">
     <img src="valverde/DSC03120.jpg" alt="Valverde con el equipo de ABN" width="1600" height="1067">
+  </div>
+</section>
+
+<section class="tv qa" aria-label="Una pregunta a Martín Sanado">
+  <div class="tv-row">
+    <div class="tv-copy">
+      <p class="k">Así pregunto</p>
+      <blockquote>«La gente de allá habla muy bien de vos. ¿Qué es lo que te hizo cambiar de una a otra?»</blockquote>
+      <p>A Martín Sanado, sobre Google, Accenture y Amazon. Contestó con una historia: un hostel en Milán, mal internet y una entrevista con Google.</p>
+      <p class="tv-src">Minuto 13 de 52. <a href="https://www.youtube.com/watch?v=LxQVj8YEtUY&amp;t=782s">Seguir en YouTube</a></p>
+    </div>
+    <video
+      controls
+      playsinline
+      preload="none"
+      poster="sanado/poster.jpg"
+      src="sanado/pregunta.mp4"
+      width="1280"
+      height="720">
+    </video>
   </div>
 </section>
 
