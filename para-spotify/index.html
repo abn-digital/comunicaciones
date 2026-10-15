@@ -469,6 +469,9 @@
   .card .tag{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin:18px 0 8px}
   .card h3{font-weight:300;font-size:clamp(20px,1.8vw,24px);letter-spacing:-.015em;color:var(--ink);margin:0 0 8px;line-height:1.15}
   .card .role{font-size:14px;font-weight:300;line-height:1.5;margin:0 0 14px}
+  .list .away{margin:9vh 0 0;padding-top:28px;border-top:1px solid var(--line);font-size:16px;font-weight:300;line-height:1.7;color:var(--ink);max-width:90ch}
+  .list .away span{display:block;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+  .list .away em{font-style:normal;color:var(--muted)}
   .list .credit{font-size:12px;font-weight:300;color:var(--muted);margin:7vh 0 0}
   .card .q{
     font-size:15px;font-weight:300;line-height:1.45;color:var(--ink);margin:0;
@@ -600,7 +603,7 @@
       <p class="cue">Frío. Sin música.</p>
       <p class="sfx">Se escucha un cubo girando, rápido. Para.</p>
       <p class="spk">JP</p>
-      <p class="line">Gael, ¿cuántos algoritmos tenés en la cabeza ahora mismo?</p>
+      <p class="line">Gael, cuando resolvés un cubo, ¿estás pensando, o ya no?</p>
       <p class="spk">Gael</p>
       <p class="line pend">…</p>
       <p class="spk">JP, a cámara</p>
@@ -635,7 +638,7 @@
   <header class="list-head">
     <p class="k">La lista sigue</p>
     <h2>Los que quiero sentar.</h2>
-    <p>Todavía no los invité. Argentinos muy buenos en algo difícil, y casi nunca entrevistados a fondo. Debajo de cada uno, la pregunta con la que arrancaría.</p>
+    <p>Todavía no los invité. Argentinos que viven acá, muy buenos en algo difícil y casi nunca entrevistados a fondo. Debajo de cada uno, la pregunta con la que arrancaría.</p>
   </header>
   <div class="cards">
     <article class="card">
@@ -643,79 +646,45 @@
       <p class="tag">Seguridad</p>
       <h3>Alfredo Ortega</h3>
       <p class="role">Hacker. En 2007 encontró una falla remota en OpenBSD. Hoy busca bugs con IA.</p>
-      <p class="q">«¿Cómo encontrás un agujero donde todo el mundo jura que no hay?»</p>
-    </article>
-    <article class="card">
-      <img src="guests/sclar.jpg" alt="Melanie Sclar" width="600" height="600" loading="lazy">
-      <p class="tag">Inteligencia artificial</p>
-      <h3>Melanie Sclar</h3>
-      <p class="role">Oro en la olimpíada de matemática y campeona latinoamericana de programación. Hoy investiga modelos de lenguaje en Meta.</p>
-      <p class="q">«¿Una IA entiende lo que el otro piensa, o nos está chamuyando?»</p>
+      <p class="q">«¿Se puede escribir software sin agujeros, o cualquier cosa lo bastante compleja termina teniendo uno?»</p>
     </article>
     <article class="card">
       <img src="guests/gutierrez.jpg" alt="Agustín Gutiérrez" width="600" height="600" loading="lazy">
       <p class="tag">Programación competitiva</p>
       <h3>Agustín Gutiérrez</h3>
       <p class="role">Plata en la Olimpíada Internacional de Informática. Llevó ocho equipos a mundiales de programación.</p>
-      <p class="q">«¿El talento algorítmico se entrena o viene de fábrica?»</p>
+      <p class="q">«¿Hay belleza en un algoritmo? ¿Qué separa una solución correcta de una que te parece hermosa?»</p>
     </article>
     <article class="card">
       <img src="guests/richarte.jpg" alt="Gerardo Richarte" width="600" height="600" loading="lazy">
       <p class="tag">Espacio</p>
       <h3>Gerardo Richarte</h3>
       <p class="role">Cofundador de Satellogic. Antes escribía exploits en Core Security.</p>
-      <p class="q">«¿Qué tiene en común romper un sistema con construir uno que vuela?»</p>
-    </article>
-    <article class="card">
-      <img src="guests/zaldarriaga.jpg" alt="Matías Zaldarriaga" width="600" height="600" loading="lazy">
-      <p class="tag">Cosmología</p>
-      <h3>Matías Zaldarriaga</h3>
-      <p class="role">Astrofísico en el Institute for Advanced Study de Princeton. Premio Gruber de Cosmología 2021.</p>
-      <p class="q">«¿Cómo se encuentran agujeros negros que nadie había reportado, en datos que estaban a la vista?»</p>
-    </article>
-    <article class="card">
-      <img src="guests/cecchi.jpg" alt="Guillermo Cecchi" width="600" height="600" loading="lazy">
-      <p class="tag">IA y mente</p>
-      <h3>Guillermo Cecchi</h3>
-      <p class="role">Neurocientífico computacional en Nueva York. Estudia cómo detectar psicosis en la forma de hablar.</p>
-      <p class="q">«¿Qué escucha un algoritmo en cómo hablamos que un psiquiatra no llega a escuchar?»</p>
-    </article>
-    <article class="card">
-      <img src="guests/ofarrell.jpg" alt="Clara O&#x27;Farrell" width="600" height="600" loading="lazy">
-      <p class="tag">Marte</p>
-      <h3>Clara O&#x27;Farrell</h3>
-      <p class="role">Ingeniera en el JPL de la NASA. Trabajó en el paracaídas que aterrizó al Perseverance.</p>
-      <p class="q">«¿Cómo se pasa de estudiar medusas a frenar un rover en Marte?»</p>
+      <p class="q">«Pasaste de atacar sistemas a construir satélites que nadie puede ir a arreglar. ¿Cómo cambia diseñar algo cuando no hay segunda oportunidad?»</p>
     </article>
     <article class="card">
       <img src="guests/crosetti.jpg" alt="Mariano Crosetti" width="600" height="600" loading="lazy">
       <p class="tag">Programación competitiva</p>
       <h3>Mariano Crosetti</h3>
       <p class="role">Coach de programación competitiva en Rosario. Llevó equipos a siete finales mundiales.</p>
-      <p class="q">«¿Qué cambió para que la programación competitiva dejara de ser cosa de la UBA?»</p>
-    </article>
-    <article class="card">
-      <img src="guests/arjovsky.jpg" alt="Martín Arjovsky" width="600" height="600" loading="lazy">
-      <p class="tag">Inteligencia artificial</p>
-      <h3>Martín Arjovsky</h3>
-      <p class="role">Investigador en Google DeepMind. Autor principal de Wasserstein GAN, un paper clave de la IA generativa.</p>
-      <p class="q">«¿Cómo le explicás tu paper a alguien que nunca vio una fórmula?»</p>
+      <p class="q">«Entrenaste chicos durante años. ¿Qué cambia en la cabeza de alguien el día que entiende la recursión de verdad?»</p>
     </article>
     <article class="card">
       <img src="guests/schmiegelow.jpg" alt="Christian Schmiegelow" width="600" height="600" loading="lazy">
       <p class="tag">Física cuántica</p>
       <h3>Christian Schmiegelow</h3>
       <p class="role">UBA y CONICET. Dirige un laboratorio que atrapa iones de a uno.</p>
-      <p class="q">«¿Qué tenés encerrado en ese laboratorio de Exactas, y para qué sirve?»</p>
+      <p class="q">«Controlás átomos de a uno. ¿Qué entendemos hoy de la mecánica cuántica que hace cien años no, y qué seguimos sin entender?»</p>
     </article>
     <article class="card">
-      <div class="ph" aria-hidden="true">JC</div>
+      <img src="guests/courreges.jpg" alt="Joaquín Courreges" width="600" height="600" loading="lazy">
       <p class="tag">Excel competitivo</p>
       <h3>Joaquín Courreges</h3>
-      <p class="role">Finalista del Mundial de Excel 2024, en Las Vegas.</p>
-      <p class="q">«¿Qué pasa en una partida de Excel competitivo?»</p>
+      <p class="role">Finalista del Mundial de Excel 2024, en Las Vegas. Laburamos juntos en ABN.</p>
+      <p class="q">«Cuando mirás un problema y ya sabés cómo resolverlo antes de pensarlo, ¿eso es intuición o es método entrenado?»</p>
     </article>
   </div>
+  <p class="away"><span>Y argentinos afuera, para cuando pasen por Buenos Aires</span>Melanie Sclar <em>(IA, Meta)</em> · Matías Zaldarriaga <em>(cosmología, Princeton)</em> · Guillermo Cecchi <em>(neurociencia, Nueva York)</em> · Clara O&#x27;Farrell <em>(NASA JPL)</em> · Martín Arjovsky <em>(IA, Google DeepMind)</em></p>
   <p class="credit">Fotos: sitios institucionales y prensa de cada uno.</p>
 </section>
 <!-- guests:end -->
