@@ -404,7 +404,7 @@
     display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
   }
 
-  /* show: what the podcast is, four topics in a row */
+  /* show: what the podcast is, four recurring questions */
   .show{background:var(--bg);padding:14vh clamp(18px,3.2vw,56px) 12vh}
   .show-head{margin-bottom:8vh}
   .show-head h2{
@@ -412,12 +412,15 @@
     letter-spacing:-.03em;color:var(--ink);margin:0 0 24px;max-width:20ch;
   }
   .show-head p{font-size:clamp(16px,1.55vw,20px);font-weight:300;margin:0;max-width:46ch}
-  .topics{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line)}
-  .topics li{padding:28px 24px 0 0}
-  .topics li+li{padding-left:24px;border-left:1px solid var(--line)}
-  .topics .n{display:block;font-size:11px;letter-spacing:.2em;color:var(--muted);margin-bottom:18px}
-  .topics h3{font-weight:300;font-size:clamp(20px,1.9vw,26px);line-height:1.15;letter-spacing:-.015em;color:var(--ink);margin:0 0 10px}
-  .topics p{font-size:15px;font-weight:300;margin:0;max-width:30ch}
+  .qs .qs-lede{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin:0 0 22px;max-width:none}
+  .qs ol{list-style:none;margin:0;padding:0;border-bottom:1px solid var(--line)}
+  .qs li{
+    display:grid;grid-template-columns:72px minmax(0,1.25fr) minmax(0,1fr);gap:28px;align-items:baseline;
+    padding:30px 0;border-top:1px solid var(--line);
+  }
+  .qs .n{font-size:11px;letter-spacing:.2em;color:var(--muted)}
+  .qs h3{font-weight:200;font-size:clamp(28px,3.4vw,46px);line-height:1.08;letter-spacing:-.03em;color:var(--ink);margin:0}
+  .qs p{font-size:clamp(15px,1.3vw,17px);font-weight:300;margin:0;max-width:40ch}
 
   /* hook: a script excerpt on dark */
   .hook{background:var(--dark);color:var(--ash)}
@@ -480,13 +483,12 @@
 
   @media (max-width:860px){
     .who,.tv-row,.qa .tv-row,.lex-face,.hook-row,.demand-row,.gap-row,.done-grid,.people,.ask-grid{grid-template-columns:1fr}
-    .topics{grid-template-columns:1fr}
+    .qs li{grid-template-columns:1fr;gap:10px;padding:26px 0}
     .cards{grid-template-columns:1fr;gap:36px}
     .card{display:grid;grid-template-columns:96px minmax(0,1fr);column-gap:16px}
     .card img,.card .ph{grid-row:1 / span 4;align-self:start}
     .card .ph{font-size:32px}
     .card .tag{margin-top:0}
-    .topics li,.topics li+li{padding:24px 0;border-left:0;border-bottom:1px solid var(--line)}
     .lex-chart{grid-template-columns:1fr;gap:28px}
     .plot{height:220px}
     .plot .col{width:18px}
@@ -584,12 +586,15 @@
     <h2>Ir a fondo en lo que casi siempre se cuenta en dos minutos.</h2>
     <p>Tecnología, algoritmos, ciencia. Temas que suelen explicarse rápido y por arriba. La idea es lo contrario: dos horas con alguien que los entiende de adentro, hasta llegar a la parte que nunca se cuenta.</p>
   </div>
-  <ol class="topics">
-    <li><span class="n">01</span><h3>Algoritmos que se memorizan</h3><p>Cómo se resuelve un cubo en segundos. Qué hay en la cabeza de alguien que se sabe decenas de secuencias.</p></li>
-    <li><span class="n">02</span><h3>Cuando la IA alucina</h3><p>Por qué un modelo contesta seguro algo que no sabe, y por qué los datos propios valen más que el modelo.</p></li>
-    <li><span class="n">03</span><h3>Qué decide un algoritmo de recomendación</h3><p>Cómo elige lo próximo que ves o escuchás, y qué se le escapa.</p></li>
-    <li><span class="n">04</span><h3>Ciencia que se hace acá</h3><p>Investigación argentina, contada por quien la hace.</p></li>
-  </ol>
+  <div class="qs">
+    <p class="qs-lede">Cuatro preguntas que vuelven en cada episodio, a gente muy distinta.</p>
+    <ol>
+      <li><span class="n">01</span><h3>¿Qué es entender algo?</h3><p>Un cubo se puede resolver de memoria, sin entenderlo. Un modelo de lenguaje puede contestar bien sin saber. ¿Dónde está la diferencia?</p></li>
+      <li><span class="n">02</span><h3>¿Hasta dónde llega una máquina?</h3><p>Qué hace hoy un algoritmo que hace cinco años no hacía, y qué sigue sin poder hacer.</p></li>
+      <li><span class="n">03</span><h3>¿Cómo se vuelve fácil algo difícil?</h3><p>Miles de horas de práctica terminan en un segundo de intuición. Qué pasa en el medio.</p></li>
+      <li><span class="n">04</span><h3>¿Qué costó?</h3><p>Lo que queda afuera cuando alguien se dedica a una sola cosa.</p></li>
+    </ol>
+  </div>
 </section>
 
 <section class="hook" aria-label="Así arrancaría el episodio 1">
