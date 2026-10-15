@@ -442,14 +442,47 @@
     display:flex;flex-direction:column;justify-content:flex-end;
   }
   .people .roster .k{color:var(--muted)}
-  .roster ul{list-style:none;margin:0 0 6vh;padding:0}
+  .roster ul{list-style:none;margin:0;padding:0}
   .roster li{padding:16px 0;border-top:1px solid var(--line);font-size:15px;font-weight:300;color:var(--body)}
   .roster li b{display:block;font-weight:200;font-size:clamp(24px,2.4vw,32px);letter-spacing:-.025em;color:var(--ink);margin-bottom:2px}
   .people .roster p:not(.k){font-size:16px;color:var(--body);max-width:32ch}
 
+  /* guest list: photo cards with the opening question */
+  .list{background:var(--bg);padding:14vh clamp(18px,3.2vw,56px) 12vh;border-top:1px solid var(--line)}
+  .list-head{margin-bottom:7vh}
+  .list-head h2{
+    font-weight:200;font-size:clamp(32px,4.6vw,64px);line-height:1.05;
+    letter-spacing:-.03em;color:var(--ink);margin:0 0 20px;
+  }
+  .list-head p:not(.k){font-size:clamp(16px,1.5vw,19px);font-weight:300;margin:0;max-width:52ch}
+  .cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:48px 28px}
+  .card{margin:0}
+  .card img,.card .ph{
+    display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:4px;
+    background:#ece6db;filter:grayscale(1) contrast(1.04);transition:filter .4s var(--ease);
+  }
+  .card:hover img{filter:none}
+  .card .ph{
+    display:flex;align-items:center;justify-content:center;
+    font-weight:200;font-size:clamp(40px,5vw,72px);letter-spacing:-.04em;color:var(--muted);
+  }
+  .card .tag{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin:18px 0 8px}
+  .card h3{font-weight:300;font-size:clamp(20px,1.8vw,24px);letter-spacing:-.015em;color:var(--ink);margin:0 0 8px;line-height:1.15}
+  .card .role{font-size:14px;font-weight:300;line-height:1.5;margin:0 0 14px}
+  .list .credit{font-size:12px;font-weight:300;color:var(--muted);margin:7vh 0 0}
+  .card .q{
+    font-size:15px;font-weight:300;line-height:1.45;color:var(--ink);margin:0;
+    padding-left:12px;border-left:2px solid var(--spot);
+  }
+
   @media (max-width:860px){
     .who,.tv-row,.qa .tv-row,.lex-face,.hook-row,.demand-row,.gap-row,.done-grid,.people,.ask-grid{grid-template-columns:1fr}
     .topics{grid-template-columns:1fr}
+    .cards{grid-template-columns:1fr;gap:36px}
+    .card{display:grid;grid-template-columns:96px minmax(0,1fr);column-gap:16px}
+    .card img,.card .ph{grid-row:1 / span 4;align-self:start}
+    .card .ph{font-size:32px}
+    .card .tag{margin-top:0}
     .topics li,.topics li+li{padding:24px 0;border-left:0;border-bottom:1px solid var(--line)}
     .lex-chart{grid-template-columns:1fr;gap:28px}
     .plot{height:220px}
@@ -594,10 +627,98 @@
       <li><b>Sebastián Valverde</b>Google México</li>
       <li><b>Martín Sanado</b>IA generativa en AWS</li>
     </ul>
-    <p class="k">La lista sigue</p>
-    <p>Investigadores, olímpicos, programadores de competencia. Nerds que casi nadie entrevistó a fondo.</p>
   </div>
 </section>
+
+<!-- guests:start -->
+<section class="list" aria-label="La lista de invitados">
+  <header class="list-head">
+    <p class="k">La lista sigue</p>
+    <h2>Los que quiero sentar.</h2>
+    <p>Todavía no los invité. Argentinos muy buenos en algo difícil, y casi nunca entrevistados a fondo. Debajo de cada uno, la pregunta con la que arrancaría.</p>
+  </header>
+  <div class="cards">
+    <article class="card">
+      <img src="guests/ortega.jpg" alt="Alfredo Ortega" width="600" height="600" loading="lazy">
+      <p class="tag">Seguridad</p>
+      <h3>Alfredo Ortega</h3>
+      <p class="role">Hacker. En 2007 encontró una falla remota en OpenBSD. Hoy busca bugs con IA.</p>
+      <p class="q">«¿Cómo encontrás un agujero donde todo el mundo jura que no hay?»</p>
+    </article>
+    <article class="card">
+      <img src="guests/sclar.jpg" alt="Melanie Sclar" width="600" height="600" loading="lazy">
+      <p class="tag">Inteligencia artificial</p>
+      <h3>Melanie Sclar</h3>
+      <p class="role">Oro en la olimpíada de matemática y campeona latinoamericana de programación. Hoy investiga modelos de lenguaje en Meta.</p>
+      <p class="q">«¿Una IA entiende lo que el otro piensa, o nos está chamuyando?»</p>
+    </article>
+    <article class="card">
+      <img src="guests/gutierrez.jpg" alt="Agustín Gutiérrez" width="600" height="600" loading="lazy">
+      <p class="tag">Programación competitiva</p>
+      <h3>Agustín Gutiérrez</h3>
+      <p class="role">Plata en la Olimpíada Internacional de Informática. Llevó ocho equipos a mundiales de programación.</p>
+      <p class="q">«¿El talento algorítmico se entrena o viene de fábrica?»</p>
+    </article>
+    <article class="card">
+      <img src="guests/richarte.jpg" alt="Gerardo Richarte" width="600" height="600" loading="lazy">
+      <p class="tag">Espacio</p>
+      <h3>Gerardo Richarte</h3>
+      <p class="role">Cofundador de Satellogic. Antes escribía exploits en Core Security.</p>
+      <p class="q">«¿Qué tiene en común romper un sistema con construir uno que vuela?»</p>
+    </article>
+    <article class="card">
+      <img src="guests/zaldarriaga.jpg" alt="Matías Zaldarriaga" width="600" height="600" loading="lazy">
+      <p class="tag">Cosmología</p>
+      <h3>Matías Zaldarriaga</h3>
+      <p class="role">Astrofísico en el Institute for Advanced Study de Princeton. Premio Gruber de Cosmología 2021.</p>
+      <p class="q">«¿Cómo se encuentran agujeros negros que nadie había reportado, en datos que estaban a la vista?»</p>
+    </article>
+    <article class="card">
+      <img src="guests/cecchi.jpg" alt="Guillermo Cecchi" width="600" height="600" loading="lazy">
+      <p class="tag">IA y mente</p>
+      <h3>Guillermo Cecchi</h3>
+      <p class="role">Neurocientífico computacional en Nueva York. Estudia cómo detectar psicosis en la forma de hablar.</p>
+      <p class="q">«¿Qué escucha un algoritmo en cómo hablamos que un psiquiatra no llega a escuchar?»</p>
+    </article>
+    <article class="card">
+      <img src="guests/ofarrell.jpg" alt="Clara O&#x27;Farrell" width="600" height="600" loading="lazy">
+      <p class="tag">Marte</p>
+      <h3>Clara O&#x27;Farrell</h3>
+      <p class="role">Ingeniera en el JPL de la NASA. Trabajó en el paracaídas que aterrizó al Perseverance.</p>
+      <p class="q">«¿Cómo se pasa de estudiar medusas a frenar un rover en Marte?»</p>
+    </article>
+    <article class="card">
+      <img src="guests/crosetti.jpg" alt="Mariano Crosetti" width="600" height="600" loading="lazy">
+      <p class="tag">Programación competitiva</p>
+      <h3>Mariano Crosetti</h3>
+      <p class="role">Coach de programación competitiva en Rosario. Llevó equipos a siete finales mundiales.</p>
+      <p class="q">«¿Qué cambió para que la programación competitiva dejara de ser cosa de la UBA?»</p>
+    </article>
+    <article class="card">
+      <img src="guests/arjovsky.jpg" alt="Martín Arjovsky" width="600" height="600" loading="lazy">
+      <p class="tag">Inteligencia artificial</p>
+      <h3>Martín Arjovsky</h3>
+      <p class="role">Investigador en Google DeepMind. Autor principal de Wasserstein GAN, un paper clave de la IA generativa.</p>
+      <p class="q">«¿Cómo le explicás tu paper a alguien que nunca vio una fórmula?»</p>
+    </article>
+    <article class="card">
+      <img src="guests/schmiegelow.jpg" alt="Christian Schmiegelow" width="600" height="600" loading="lazy">
+      <p class="tag">Física cuántica</p>
+      <h3>Christian Schmiegelow</h3>
+      <p class="role">UBA y CONICET. Dirige un laboratorio que atrapa iones de a uno.</p>
+      <p class="q">«¿Qué tenés encerrado en ese laboratorio de Exactas, y para qué sirve?»</p>
+    </article>
+    <article class="card">
+      <div class="ph" aria-hidden="true">JC</div>
+      <p class="tag">Excel competitivo</p>
+      <h3>Joaquín Courreges</h3>
+      <p class="role">Finalista del Mundial de Excel 2024, en Las Vegas.</p>
+      <p class="q">«¿Qué pasa en una partida de Excel competitivo?»</p>
+    </article>
+  </div>
+  <p class="credit">Fotos: sitios institucionales y prensa de cada uno.</p>
+</section>
+<!-- guests:end -->
 
 <section class="gap">
   <div class="gap-row">
