@@ -375,6 +375,10 @@
     letter-spacing:-.03em;margin:0 0 28px;color:var(--ash);
   }
   .ask-copy p{font-size:clamp(16px,1.45vw,19px);font-weight:300;color:var(--ash-mid);margin:0 0 16px;max-width:38ch}
+  .terms{margin:0;max-width:52ch;border-top:1px solid var(--hair)}
+  .terms div{display:grid;grid-template-columns:130px minmax(0,1fr);gap:20px;padding:16px 0;border-bottom:1px solid var(--hair)}
+  .terms dt{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ash-dim);padding-top:4px}
+  .terms dd{margin:0;font-size:clamp(16px,1.45vw,19px);font-weight:300;color:var(--ash)}
   .ask-side{
     border-left:1px solid var(--hair);
     padding:12vh clamp(22px,3.6vw,56px);
@@ -484,6 +488,7 @@
   @media (max-width:860px){
     .who,.tv-row,.qa .tv-row,.lex-face,.hook-row,.demand-row,.gap-row,.done-grid,.people,.ask-grid{grid-template-columns:1fr}
     .qs li{grid-template-columns:1fr;gap:10px;padding:26px 0}
+    .terms div{grid-template-columns:1fr;gap:6px}
     .cards{grid-template-columns:1fr;gap:36px}
     .card{display:grid;grid-template-columns:96px minmax(0,1fr);column-gap:16px}
     .card img,.card .ph{grid-row:1 / span 4;align-self:start}
@@ -535,7 +540,7 @@
     <h2>Me llamo Juan Pablo Brea.</h2>
     <p>Ingeniero industrial, orientación en mecatrónica. Doy clase en la Universidad Austral.</p>
     <p>Founder &amp; Partner de ABN Group. Holding que contiene a <a href="https://abndigital.com.ar/">ABN Digital</a>, <a href="https://dartsteam.github.io/abn-studio/">ABN Studio</a>, <a href="https://www.hikethecloud.com/">Hike</a> y <a href="https://detrics.io/es/">Detrics</a>. Mi rol activo es CEO de Hike.</p>
-    <p>Quiero hacer un podcast de entrevistas largas, en español, para ir a fondo en temas difíciles.</p>
+    <p>Quiero hacer un podcast de entrevistas largas, en español, para ir profundo en temas difíciles.</p>
     <div class="who-press">
       <p><span>Prensa</span>
         <a href="https://www.infobae.com/educacion/2023/05/25/el-messi-del-excel-es-argentino-y-triunfo-en-el-campeonato-mundial-del-programa/">Infobae</a> ·
@@ -583,7 +588,7 @@
 <section class="show" aria-label="El show">
   <div class="show-head">
     <p class="k">El show</p>
-    <h2>Ir a fondo en lo que casi siempre se cuenta en dos minutos.</h2>
+    <h2>Ir profundo en lo que casi siempre se cuenta en dos minutos.</h2>
     <p>Tecnología, algoritmos, ciencia. Temas que suelen explicarse rápido y por arriba. La idea es lo contrario: dos horas con alguien que los entiende de adentro, hasta llegar a la parte que nunca se cuenta.</p>
   </div>
   <div class="qs">
@@ -908,9 +913,12 @@
     <div class="ask-copy">
       <p class="k" style="color:var(--ash-dim)">El pedido</p>
       <h2>Me gustaría hacerlo con Spotify.</h2>
-      <p>Lo que necesito es una sala a la que volver, cada quince días, unas dos horas.</p>
-      <p>Yo preparo las entrevistas y consigo a los invitados. Quiero hacerlo con constancia, aunque tarde en crecer.</p>
-      <p>No lo pienso como un negocio. Lo hago porque me gusta aprender así.</p>
+      <dl class="terms">
+        <div><dt>La sala</dt><dd>Un estudio en las oficinas de Spotify en Buenos Aires.</dd></div>
+        <div><dt>Cada cuánto</dt><dd>Cada quince días, unas dos horas.</dd></div>
+        <div><dt>Lo pongo yo</dt><dd>La investigación, los invitados y la conducción.</dd></div>
+        <div><dt>Para empezar</dt><dd>Gael Lapeyre en el episodio 1, y la lista de arriba.</dd></div>
+      </dl>
     </div>
     <div class="ask-side">
       <p class="q">¿En cuánto podemos ser socios de este proyecto?</p>
