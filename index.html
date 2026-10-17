@@ -4,96 +4,118 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Comunicaciones · ABN Group</title>
-<meta name="description" content="Comunicaciones y comunicados de ABN Group.">
+<meta name="description" content="Comunicaciones y comunicados de ABN Group: briefing semanal para partners y comunicados por plataforma.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ABN Group">
+<meta property="og:title" content="Comunicaciones · ABN Group">
+<meta property="og:description" content="Briefing semanal para partners y comunicados por plataforma, listos para compartir.">
+<meta property="og:url" content="https://abn-digital.github.io/comunicaciones/">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAwIDEwMDAiPjxzdHlsZT5wYXRoe2ZpbGw6IzIzMjMyM31AbWVkaWEgKHByZWZlcnMtY29sb3Itc2NoZW1lOmRhcmspe3BhdGh7ZmlsbDojZjRmMGU4fX08L3N0eWxlPjxwYXRoIGQ9Ik0yNDUuMDksMzYxLjkzYy4xOCw2Ny44Nyw1Ny43NiwxMjQuMDEsMTI0LjIxLDEyNC4zbDQ2LjU3LTEuOTZjMTUuNzUuMDcsMjguNzQsOS4zNiwzMy41NSwyMi4yNSw1LjczLDE1LjM1LDEuOTMsMzAuODMtMTEuMzcsNDEuNDZsLTI0OC42NCwxOTguNjdjLTUuMjQsNC4xOS04LjQyLDEwLjMtOC40MiwxNi43bC0uMjksMjguMjRjLS42MiwyOS41MywxNy4xNCw0My44OSwyOC40LDQzLjg3bDE2OS43Mi0uOSw0MzAuMTctMzEwLjI4YzQuOTMtMy45NCw3Ljk0LTEwLjYxLDcuOTQtMTYuNTRsMi40MS04My4wMmMwLTExLjI3LTgtMjAuMTYtMTkuNTMtMjAuMTZsLTIzMC41Ni4xMmMtMzIuMy4wMi01Ni4zNS0yMy41Mi01Ni4zMy01NS44MWwuMDgtMTY0LjM1YzAtMTEuMTgtOC4xLTIwLTE5LjcxLTIwbC0yMjguODIsMi40MWMtMTAuNTcsMC0xOS44NSw3LjUxLTE5LjgzLDE4LjE5bC40NiwxNzYuOFoiLz48L3N2Zz4=">
 <style>
   :root{
     --bg:#f3f0e9;--bg2:#ece6db;--card:#fffdf9;--ink:#211d1a;--body:#564f47;--muted:#8d8478;
-    --line:rgba(33,29,26,.12);--accent:#e00000;
+    --line:rgba(33,29,26,.12);--accent:#12304F;--accent-soft:#e6eef5;
     --sans:'Helvetica Neue',Helvetica,Arial,sans-serif;
+    --shadow:0 24px 60px -36px rgba(33,29,26,.4);
   }
-  @media (prefers-color-scheme:dark){:root{
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
     --bg:#161310;--bg2:#1d1914;--card:#201c17;--ink:#f4f0e8;--body:#c4bdb0;--muted:#a89f8f;
-    --line:rgba(244,240,232,.14);--accent:#ff5146;
+    --line:rgba(244,240,232,.14);--accent:#9db8d4;--accent-soft:#1a2838;--shadow:0 30px 70px -34px rgba(0,0,0,.7);
   }}
+  :root[data-theme="dark"]{--bg:#161310;--bg2:#1d1914;--card:#201c17;--ink:#f4f0e8;--body:#c4bdb0;--muted:#a89f8f;--line:rgba(244,240,232,.14);--accent:#9db8d4;--accent-soft:#1a2838;--shadow:0 30px 70px -34px rgba(0,0,0,.7)}
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--body);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased}
-  .wrap{max-width:760px;margin:0 auto;padding:72px 24px 100px}
+  .wrap{max-width:820px;margin:0 auto;padding:72px 24px 100px}
+  .chrome{position:fixed;top:16px;right:16px;z-index:60}
+  .theme-toggle{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:color-mix(in srgb,var(--card) 82%,transparent);color:var(--ink);cursor:pointer;display:flex;align-items:center;justify-content:center;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+  .theme-toggle svg{width:19px;height:19px}
   .brand{display:flex;align-items:center;gap:13px}
   .iso{width:26px;height:26px}.iso path{fill:currentColor}
   .brand .n{font-size:15px;font-weight:600;color:var(--ink)}
-  h1{font-weight:200;font-size:clamp(32px,6vw,52px);line-height:1.06;letter-spacing:-.025em;color:var(--ink);margin:34px 0 0;text-wrap:balance}
-  .lead{margin:16px 0 0;font-size:16px;font-weight:300;color:var(--body);max-width:54ch}
-  .eyebrow{font-size:11px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-top:54px}
-  .list{margin-top:16px;display:grid;gap:14px}
-  .item{display:flex;align-items:center;gap:20px;text-decoration:none;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 24px;transition:border-color .2s,transform .2s}
-  .item:hover{border-color:var(--accent);transform:translateY(-2px)}
+  h1{font-weight:200;font-size:clamp(34px,6vw,56px);line-height:1.04;letter-spacing:-.03em;color:var(--ink);margin:34px 0 0;text-wrap:balance}
+  h1 b{font-weight:500}
+  .lead{margin:16px 0 0;font-size:16px;font-weight:300;color:var(--body);max-width:56ch}
+  .section-h{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-top:56px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+  .eyebrow{font-size:11px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--accent)}
+  .section-h p{margin:0;font-size:13px;color:var(--muted)}
+  .list{margin-top:16px;display:grid;gap:12px}
+  .item{display:flex;align-items:center;gap:20px;text-decoration:none;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px 24px;transition:border-color .2s,transform .2s,box-shadow .2s}
+  .item:hover{border-color:color-mix(in srgb,var(--accent) 45%,var(--line));transform:translateY(-2px);box-shadow:var(--shadow)}
   .item .meta{flex:1;min-width:0}
   .item .tag{font-size:10.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--accent)}
-  .item h2{margin:7px 0 3px;font-size:19px;font-weight:500;color:var(--ink);letter-spacing:-.01em}
+  .item h2{margin:7px 0 3px;font-size:19px;font-weight:500;color:var(--ink);letter-spacing:-.01em;line-height:1.25}
   .item p{margin:0;font-size:13.5px;color:var(--muted)}
   .item .arw{color:var(--ink);font-size:20px;font-weight:300;flex:none}
-  .foot{margin-top:64px;padding-top:22px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted)}
+  .foot{margin-top:72px;padding-top:22px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted)}
+  @media (max-width:600px){.wrap{padding-top:64px}.item{padding:18px 18px}.section-h{flex-direction:column;align-items:flex-start;gap:4px}}
 </style>
 </head>
 <body>
+<div class="chrome">
+  <button class="theme-toggle" id="tt" type="button" aria-label="Cambiar tema"></button>
+</div>
 <div class="wrap">
   <div class="brand">
     <svg class="iso" viewBox="0 0 1000 1000" aria-hidden="true"><path d="M245.09,361.93c.18,67.87,57.76,124.01,124.21,124.3l46.57-1.96c15.75.07,28.74,9.36,33.55,22.25,5.73,15.35,1.93,30.83-11.37,41.46l-248.64,198.67c-5.24,4.19-8.42,10.3-8.42,16.7l-.29,28.24c-.62,29.53,17.14,43.89,28.4,43.87l169.72-.9,430.17-310.28c4.93-3.94,7.94-10.61,7.94-16.54l2.41-83.02c0-11.27-8-20.16-19.53-20.16l-230.56.12c-32.3.02-56.35-23.52-56.33-55.81l.08-164.35c0-11.18-8.1-20-19.71-20l-228.82,2.41c-10.57,0-19.85,7.51-19.83,18.19l.46,176.8Z"/></svg>
     <span class="n">ABN Group</span>
   </div>
 
-  <h1>Comunicaciones</h1>
-  <p class="lead">Comunicados y materiales de ABN Group, listos para compartir.</p>
+  <h1>Comunicaciones <b>para partners</b>.</h1>
+  <p class="lead">El briefing semanal con lo que cambia en las plataformas, y comunicados puntuales por partner. Listos para compartir, en español e inglés.</p>
 
-  <div class="eyebrow">Publicaciones</div>
-  <div class="list">
+  <div class="section-h">
+    <div class="eyebrow">Briefing semanal</div>
+    <p>Cada lunes · desde #media-updates</p>
+  </div>
+  <div class="list" id="briefings">
     <a class="item" href="semana-2026-12-10/">
       <div class="meta">
-        <div class="tag">Briefing semanal</div>
+        <div class="tag">Briefing semanal · Semana del 10 de diciembre de 2026</div>
         <h2>Lo que importa esta semana</h2>
         <p>Novedades clave en Google Ads, Meta y el impacto de la IA en el modelo de negocio de agencias y la búsqueda.</p>
       </div>
       <span class="arw">→</span>
     </a>
-
     <a class="item" href="semana-2026-10-05/">
       <div class="meta">
-        <div class="tag">Briefing semanal</div>
+        <div class="tag">Briefing semanal · Semana del 5 de octubre de 2026</div>
         <h2>Lo que importa esta semana</h2>
         <p>Novedades en Google Ads, el impacto de la IA en búsquedas y la integración de Microsoft Advertising con HubSpot.</p>
       </div>
       <span class="arw">→</span>
     </a>
-
-<a class="item" href="semana-2026-09-28/">
+    <a class="item" href="semana-2026-09-28/">
       <div class="meta">
-        <div class="tag">Briefing semanal</div>
+        <div class="tag">Briefing semanal · Semana del 28 de septiembre de 2026</div>
         <h2>Lo que importa esta semana</h2>
         <p>Actualizaciones clave en Meta y Google Ads, evolución del modelo de agencias y novedades en IA.</p>
       </div>
       <span class="arw">→</span>
     </a>
-
-<a class="item" href="semana-2026-09-21/">
+    <a class="item" href="semana-2026-09-21/">
       <div class="meta">
-        <div class="tag">Briefing semanal</div>
+        <div class="tag">Briefing semanal · Semana del 21 de septiembre de 2026</div>
         <h2>Novedades clave en Google Ads, Meta y el futuro del marketing con IA</h2>
         <p>Google Ads, Meta Ads, y el futuro de las agencias y el comercio con IA.</p>
       </div>
       <span class="arw">→</span>
     </a>
-
-<a class="item" href="semana-2026-09-07/">
+    <a class="item" href="semana-2026-09-07/">
       <div class="meta">
-        <div class="tag">Briefing semanal</div>
-        <h2>Lo que importa esta semana.</h2>
+        <div class="tag">Briefing semanal · Semana del 7 de septiembre de 2026</div>
+        <h2>Lo que importa esta semana</h2>
         <p>Migraciones automáticas de Google a AI Max, expansión de ChatGPT Ads y evolución del modelo de negocio de agencias.</p>
       </div>
       <span class="arw">→</span>
     </a>
+  </div>
 
-<a class="item" href="readapt-clientes/">
+  <div class="section-h">
+    <div class="eyebrow">Comunicados</div>
+    <p>Por partner o plataforma · ES + EN</p>
+  </div>
+  <div class="list" id="comunicados">
+    <a class="item" href="readapt-clientes/">
       <div class="meta">
         <div class="tag">ABN Digital · Re·Adapt</div>
         <h2>Re·Adapt es de ustedes</h2>
@@ -121,5 +143,15 @@
 
   <div class="foot">ABN Group · Digital · Detrics · Hike · Studio</div>
 </div>
+<script>
+(function(){
+  const tt=document.getElementById('tt');
+  const sun='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>';
+  const moon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 14.5A8.5 8.5 0 1 1 9.5 3a7 7 0 0 0 11.5 11.5z"/></svg>';
+  function sync(){const d=document.documentElement.getAttribute('data-theme');tt.innerHTML=(d==='dark'||(!d&&matchMedia('(prefers-color-scheme:dark)').matches))?sun:moon}
+  tt.addEventListener('click',()=>{const cur=document.documentElement.getAttribute('data-theme');const next=cur==='dark'?'light':cur==='light'?'dark':(matchMedia('(prefers-color-scheme:dark)').matches?'light':'dark');document.documentElement.setAttribute('data-theme',next);sync()});
+  sync();
+})();
+</script>
 </body>
 </html>

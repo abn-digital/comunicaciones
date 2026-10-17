@@ -36,6 +36,8 @@ El repo sirve **estáticamente desde `main`**. Sin build: cualquier HTML que ent
 - `.nojekyll` evita que Pages ignore carpetas `_…`.
 - Look: boutique ABN (marfil, Helvetica fina). Acento de color = del partner (YouTube, OpenAI, etc.), no rojo ABN.
 - Tema: por defecto sigue al **sistema** del dispositivo; el toggle puede forzar claro/oscuro.
+- Los `semana-…/` los publica solo el agente de Slack (ver AGENTS.md → Briefing semanal).
+- `_inbox/` = fotos originales para el banco de fotos (no se commitean; van a GCS).
 
 ---
 

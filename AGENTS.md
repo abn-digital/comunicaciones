@@ -139,6 +139,39 @@ No renombres ni borres slugs ya compartidos con clientes sin que lo pida el due�
 
 ---
 
+## Briefing semanal (automático)
+
+Las piezas `semana-YYYY-MM-DD/` **no se escriben a mano**. Las genera el worker
+`abn-comms-agent` (repo `abn-cloud`, `hike-agentic-playground/cloud-run/abn-comms-agent`)
+cuando la app de Slack **ABN Comunicar** (`slack-apps-king/comunicar`) detecta el
+*Briefing semanal* en `#media-updates`. El commit llega como `ABN Comms Agent`.
+
+- El slug y la fecha salen del **timestamp del mensaje de Slack** (lunes de esa semana), no del texto.
+- Las fotos salen del **banco de fotos de la casa** (eventos ABN), hospedado en
+  `gs://abn-assets/comunicaciones/digest/bank/v3/` y hotlinkeado. Nada de stock ni unfurls.
+- El worker suma un **radar de noticias** (feeds oficiales + prensa) como complemento del
+  briefing: como máximo 2 ítems, marcados “Radar ABN”.
+- Para cambiar el look del digest tocá el **template del worker**
+  (`app/templates/digest.html.j2`, `app/carousel.py`, `app/render_og.py`), no las piezas publicadas.
+
+### Banco de fotos (`_inbox/`)
+
+`_inbox/` es la carpeta de **drop** de fotos originales (JPEG de cámara). Está en `.gitignore`:
+las fotos **no van a git**, van a GCS resizeadas y sin EXIF.
+
+1. Dejá las fotos en `_inbox/` con prefijo de evento: `google-DSC0001.jpg`, `launch-DSC0002.jpg`.
+2. Agregá cada una a `abn-comms-agent/app/bank/catalog.json` (tags, caption ES/EN, focus).
+3. Publicá: `python scripts/ingest_photo_bank.py --source <este repo>/_inbox --upload`.
+
+Tags disponibles: `google`, `meta`, `ai`, `tiktok`, `seo`, `agency`, `other`.
+
+### Índice raíz
+
+`index.html` tiene dos listas: `#briefings` (digests semanales, arriba) y `#comunicados`
+(piezas). El worker inserta la card nueva en la lista que corresponde. No renombres esos ids.
+
+---
+
 ## Referencias canónicas
 
 | Pieza | Qué mirar |
